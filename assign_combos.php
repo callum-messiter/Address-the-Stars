@@ -1,7 +1,7 @@
 <?php
 
-// Retrieve a list of words from the DB and build the pairs list
-include "db_connect.php";
+// Initiate connection to the database...
+$db = mysqli_connect('localhost', 'root', '', 'words');
 
 // Query database of words
 $words_sql = "SELECT * FROM words";
@@ -14,8 +14,8 @@ $array  = array();
 while($row = mysqli_fetch_array($words_res)){
     $array[] = $row['word'];
 }
-
-// Create array of all possible two-word combinations. We will randomly select our combinations from this array
+ 
+// Create array of all possible two-word combinations, from which we will randomly select our combinations 
 $pairs = array();
 foreach ($array as $word1) {
     foreach ($array as $word2) {
@@ -34,11 +34,11 @@ while($row = mysqli_fetch_array($stars_res)){
     // Store the star name in a variable
     $star = $row['star_name'];
 
-    // Set $pair as random combination from $pairs
+    // Set $pair as random combination from $pairs...
     $ran_num = array_rand($pairs);
-    $pair = $pairs[$ran_num];
+    $pair    = $pairs[$ran_num];
 
-    // ... and remove it, in order to prevent repating combinations
+    // ...and remove it, in order to prevent repating combinations
     array_splice($pairs, $ran_num, 1);
 
     // Set variables 
