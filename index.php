@@ -1,5 +1,7 @@
 <?php
 
+ini_set('max_execution_time', 100000);
+
 // Initiate connection to the database...
 $db = mysqli_connect('localhost', 'root', '', 'stellar');
 
@@ -20,7 +22,7 @@ $max = count($words) - 1;
 $min = $max - $max;
 
 // Pull all stars from database
-$stars_sql = "SELECT * FROM stars";
+$stars_sql = "SELECT * FROM stars_large";
 $stars_res = mysqli_query($db, $stars_sql)or die(mysqli_error());
 
 // Create an array of assigned triplets to avoid repeating combinations
@@ -29,7 +31,9 @@ $used = [];
 while($row = mysqli_fetch_array($stars_res)){
      
      // Store the star name and star_id in variables
-     $id = $row['id'];
+     $id  = $row['StarID'];
+     $ra  = $row['RA'];
+     $dec = $row['Dec'];
      
      // *Generate unique three-word combination
      do{  
@@ -48,7 +52,11 @@ while($row = mysqli_fetch_array($stars_res)){
     
      // If the new three-word combination hasn't already been created, add it to the array of assigned triplets
      $used[$triplet] = true;
-     echo $id.'&nbsp;&nbsp;&nbsp;&nbsp;'.$triplet.'<br/><br/>';   
+     // Add the generated triplet to the star's row in the table
+     $w3w = "UPDATE stars_large SET w3w = '$triplet' WHERE StarID = '$id'";
+     $w3w_res = mysqli_query($db, $w3w)or die(mysqli_error($db));
+       
+     echo $id.'&nbsp;added.<br/>'; 
 }    
 
 ?>
