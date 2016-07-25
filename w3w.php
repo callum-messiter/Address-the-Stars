@@ -22,7 +22,7 @@ $max = count($words) - 1;
 $min = $max - $max;
 
 // Pull all stars from database
-$stars_sql = "SELECT * FROM stars_large";
+$stars_sql = "SELECT * FROM stars";
 $stars_res = mysqli_query($db, $stars_sql)or die(mysqli_error());
 
 // Create an array of assigned triplets to avoid repeating combinations
@@ -52,11 +52,11 @@ while($row = mysqli_fetch_array($stars_res)){
     
      // If the new three-word combination hasn't already been created, add it to the array of assigned triplets
      $used[$triplet] = true;
+     
      // Add the generated triplet to the star's row in the table
-     $w3w = "UPDATE stars_large SET w3w = '$triplet' WHERE StarID = '$id'";
-     $w3w_res = mysqli_query($db, $w3w)or die(mysqli_error($db));
-       
-     echo $id.'&nbsp;added.<br/>'; 
+     # $w3w = "UPDATE stars SET w3w = '$triplet' WHERE StarID = '$id'";
+     # $w3w_res = mysqli_query($db, $w3w)or die(mysqli_error($db));
+     # echo $id.'&nbsp;added.<br/>'; 
 }    
 
 ?>
