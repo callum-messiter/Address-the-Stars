@@ -17,7 +17,7 @@ to remove, for example, words with less than 4 or more than 7 characters </li>
 and add it to the star's row</li>
 </ul>
 
-what3words doesn't use a database of three-word combinations. Since they have 57-trillion of them, this would be extremely inefficient, 
+what3words doesn't use a database of three-word combinations. Since they have 57 trillion of them, this would be extremely inefficient, 
 and a hindrance to the end-user experience. They instead encode geographical coordinates into three-word combinations, using what I assume to be
 some kind of mapping function, where each pair of lat-long coordinates corresponds to a unique three-word address. 
 
@@ -26,7 +26,7 @@ the encoding algorithm eludes me.
 
 So, this is by no means a scalable solution to expand what3words to space and address all the stars in the galaxy. Nor will it bring the 
 convenience of commnicatability to the field of astronomy. RA and Dec provide information such as rising and setting times, so astronomers and
-star gazers can plan observing windows - so it'd be a bit supurflous from their perspective. There's also no need for a navigational solution for space, like there is here on Earth. At least not yet. 
+star gazers can plan observing windows - so it'd be superfluous from their perspective. There's also no need for a navigational solution for space, like there is here on Earth. At least not yet. 
 
 But we do  have enough words to provide a unique three-word address to every star in the Local Group, so perhaps a post-human, inter-stellar travelling
 species will carry what3words into the realm of celestial navigation in the very distant future.
