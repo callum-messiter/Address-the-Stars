@@ -30,6 +30,6 @@ star gazers can plan observing windows - so it'd be superfluous from their persp
 
 There's also no need for a navigational solution for space, like there is here on Earth. At least not yet. Even then, the infinite nature of the celestial sphere would have to be considered. To label every spec of space to some abitrary level of precision would likely require the incorporation of distance into the encoding algorithm, alongside RA and Dec coordinates - which might necessitate four- or five- or six-word combinations.
 
-But we do  have enough words to provide a unique three-word address to every star in the Local Group, so perhaps a post-human, interstellar species will carry what3words into the realm of celestial navigation in the very distant future.
+But we do  have enough words to provide a unique three-word address to every star in the Local Group, so perhaps a post-human, interstellar species will carry what3words into the realm of space navigation in the very distant future.
 
 As for me: this was a fun project - my third so far - and a great learning experience.
