@@ -25,7 +25,7 @@ I, however, needed not 57 trillion combinations, but a mere ~87,000; and sadly, 
 the encoding algorithm eludes me.
 
 So, this is by no means a scalable solution to expand what3words to space and address all the stars in the galaxy. Nor will it bring the 
-convenience of commnicatability to the field of astronomy. RA and Dec provide information such as rising and setting times, so astronomers and
+convenience of communicability to the field of astronomy. RA and Dec provide information such as rising and setting times, so astronomers and
 star gazers can plan observing windows - so it'd be superfluous from their perspective. 
 
 There's also no need for a navigational solution for space, like there is here on Earth. At least not yet. Even then, the infinite nature of the celestial sphere would have to be considered. To label every spec of space to some abitrary level of precision would likely require the incorporation of distance into the encoding algorithm, alongside RA and Dec coordinates - which might necessitate four- or five- or six-word combinations.
