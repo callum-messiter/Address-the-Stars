@@ -26,7 +26,7 @@ the encoding algorithm eludes me.
 
 So, this is by no means a scalable solution to expand what3words to space and address all the stars in the galaxy. Nor will it bring the 
 convenience of commnicatability to the field of astronomy. RA and Dec provide information such as rising and setting times, so astronomers and
-star gazers can plan observing windows - so it'd be superfluous from their perspective. There's also no need for a navigational solution for space, like there is here on Earth. At least not yet. Even then, to label every spec of space to some abitrary level of precision would likely require the incorporation of distance into the encoding algorithm, alongside RA and Dec coordinates - which might necessitate four- or five- or six-word combinations.
+star gazers can plan observing windows - so it'd be superfluous from their perspective. There's also no need for a navigational solution for space, like there is here on Earth. At least not yet. Even then, the infinite nature of the celestial sphere would have o be mitigated. To label every spec of space to some abitrary level of precision would likely require the incorporation of distance into the encoding algorithm, alongside RA and Dec coordinates - which might necessitate four- or five- or six-word combinations.
 
 But we do  have enough words to provide a unique three-word address to every star in the Local Group, so perhaps a post-human, inter-stellar travelling
 species will carry what3words into the realm of celestial navigation in the very distant future.
