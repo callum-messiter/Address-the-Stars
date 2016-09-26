@@ -3,14 +3,13 @@
 what3words have divided the Earth's surface into 57 trillion 3m-by-3m squares, and assigned each with a unique 3-word identifier
 (table.lamp.spoon, for example). 
 
-I took some inspiration from their idea and added three-word identifiers to a stellar catalogue. Now 87,475 stars from the HYG Database 
-(https://github.com/astronexus/HYG-Database) each have a three-word address. 
+I took some inspiration from their idea and added three-word identifiers to a stellar catalogue. Now 87,475 stars from the <a href="https://github.com/astronexus/HYG-Database">HYG Database</a> each have a three-word address. 
 
 <h3>How I did it</h3>
 
 <ul>
-<li>I created a table of the most commonly used words in the American-English language (http://www.wordfrequency.info/intro.asp)</li>
-<li>I created a table of homophones (http://www.singularis.ltd.uk/bifroest/misc/homophones-list.html) and a table of offensive words (http://www.cs.cmu.edu/~biglou/resources/)</li>
+<li>I created a table of the most commonly used <a href="http://www.wordfrequency.info/intro.asp">words</a> in the American-English language</li>
+<li>I created a table of <a href="http://www.singularis.ltd.uk/bifroest/misc/homophones-list.html">homophones</a> and a table of <a href="http://www.cs.cmu.edu/~biglou/resources/">offensive words</a></li>
 <li>I wrote the <b>cleanse_wordlist</b> script to remove all homophones and offensive words from the main words table, and applied other cleansing parameters 
 to remove, for example, words with less than 4 or more than 7 characters </li>
 <li>I wrote the <b>w3w</b> script to loop through the HYG Stellar Database, generate a unique three-word combination from the main words table
