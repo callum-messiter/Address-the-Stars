@@ -1,16 +1,19 @@
+html {
+	font-family: "Droid Serif", Georgia, Times, serif;
+}
+
 form {
 	position: relative;
 	top: 250px;
 }
 
 #generate {
-	background-color: #808080;
-	border-color: #cccccc;
-	color: white;
+	background-color: #ededed;
+	border-color: #e1e1e1;
+	color: #777;
 }
 
 #result {
-	font-family: helvetica;
 	font-size: 20px;
 	color: white;
 }
