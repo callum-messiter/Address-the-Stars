@@ -2,8 +2,7 @@
 
 ini_set('max_execution_time', 1000);
 
-// Initiate connection to the database...
-$db = mysqli_connect('localhost', 'root', '', 'stellar');
+require 'functions.php';
 
 // Pull all words from the datbase and order them alphabetically
 $sql   = "SELECT * FROM words ORDER BY word";
@@ -39,8 +38,7 @@ while($row = mysqli_fetch_array($res)){
      // If the word has fewer than 4 or more than 7 characters, delete its row from database
      if(strlen($word) < 4 || strlen($word) > 7){
           echo $word.' is not the desired length.<br/>';
-          $del     = "DELETE FROM words_big WHERE (id) = $word_id";
-          $del_res = mysqli_query($db, $del)or die(mysqli_error($db));
+          deleteWord($db, $word_id);
           # echo 'Word&nbsp;'.$word_id.'&nbsp; deleted.<br/><br/>';
           continue;
      }
@@ -48,8 +46,7 @@ while($row = mysqli_fetch_array($res)){
      // If the word is offensive or a homophone, delete its row from the database
      if(in_array($word, $homophones) || in_array($word, $offensive)){
           echo $word.' is a homophone/offensive word.<br/>';
-          $del     = "DELETE FROM words_big WHERE (id) = $word_id";
-          $del_res = mysqli_query($db, $del)or die(mysqli_error());
+          deleteWord($db, $word_id);
           # echo 'Word&nbsp;'.$word_id.'&nbsp;deleted.<br/><br/>';
           continue;
      }
@@ -57,8 +54,7 @@ while($row = mysqli_fetch_array($res)){
      // If the word is a duplicate, delete its row from the database 
      if(in_array($word, $words)){
           echo $word.' already added to the array.<br/>';
-          $del     = "DELETE FROM words_big WHERE (id) = $word_id";
-          $del_res = mysqli_query($db, $del)or die(mysqli_error());
+          deleteWord($db, $word_id);
           # echo 'Word&nbsp;'.$word_id.'&nbsp;deleted.<br/><br/>';
           continue;  
      }
@@ -66,8 +62,7 @@ while($row = mysqli_fetch_array($res)){
      // If the word is not comprised soley of lower-case alphabetical characters, delete its row from the database 
      if(!ctype_lower($word)){
           echo $word.' contains inappropriate character(s).<br/>';
-          $del     = "DELETE FROM words_big WHERE (id) = $word_id";
-          $del_res = mysqli_query($db, $del)or die(mysqli_error());
+          deleteWord($db, $word_id);
           # echo 'Word&nbsp;'.$word_id.'&nbsp;deleted.<br/><br/>';
           continue;
      }
