@@ -1,0 +1,16 @@
+form {
+	position: relative;
+	top: 250px;
+}
+
+#generate {
+	background-color: #808080;
+	border-color: #cccccc;
+	color: white;
+}
+
+#result {
+	font-family: helvetica;
+	font-size: 20px;
+	color: white;
+}

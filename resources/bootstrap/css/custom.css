@@ -1,0 +1,130 @@
+html body {
+   background-color: #1E1E1E;
+}
+
+.row {
+   border-top: 1px solid #808080;
+   padding-left: 10px;
+   padding-right: 10px;
+   padding-bottom: 10px;
+}
+
+.profile {/* Profile info */
+   position: relative;
+   top: 130px;
+}
+
+.col-sm-4 {/* Profile-info column */
+   margin-bottom: 200px;
+}
+
+.img-circle {/* Profile image */
+   height: 200px;
+   width: 200px;
+   margin: 0 auto;
+   position: relative;
+   top: 40px;
+   border: 2px solid white;
+}
+
+.text-center {/* Divs containing back-to-top and social-media-profile links */
+   font-family: helvetica;
+   color: white;
+}
+
+span {/* Category tag */
+   font-weight: bold;
+   background-color: #e6e6e6;
+   color: #0086b3;
+   padding: 3px 7px 3px 7px;
+}
+
+.col-sm-6 {/* Post columns */
+   margin-bottom: 10px;
+}
+
+.social {/* Social media icons */
+   height: 50px;
+   width: 50px;
+}
+
+.back2top, .back2top:link, .back2top:visited {/* Back-to-top link */
+   font-size: 12px;
+   color: #0086b3;
+   border-bottom: 1px solid;
+   text-decoration: none;
+}
+
+.back2top:hover {
+   color: #0BF890;
+}
+
+.post_form {/* Form for submitting blog posts */
+   position: relative;
+   left: 330px;
+   top: 10px;
+   width: 700px;
+   padding: 0;
+   margin: 0;
+   overflow: hidden;
+}
+
+.title {/* Blog title field */
+   width: 700px;
+   height: 30px;
+   font-family: helvetica;
+   font-size: 15px;
+}
+
+.submit {/* Submit-post button */
+   width: 100px;
+   height: 36px;
+   font-size: 15px;
+}
+
+.post_form input:hover {/* For hovering over fields */
+   border-color: #0086b3;
+}
+
+.tinymce {/* Post-content field */
+   font-size: 15px;
+   font-family: helvetica;
+   padding: 0;
+   margin: 0;
+}
+
+select {
+   width: 200px;
+   height: 36px;
+   font-size: 15px;
+   font-family: helvetica;
+}
+
+select:focus {
+   border-color: #0BF890;
+}
+
+option {
+   font-family: helvetica;
+   font-size: 15px;
+}
+
+.error {
+
+
+}
+
+a {
+   color: #0BF890;
+}
+
+a:hover {
+   color: #0BF890;
+}
+
+a:focus {
+	color: #0086b3;
+	text-decoration: none;
+}
+
+
