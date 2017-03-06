@@ -2,6 +2,8 @@
 
 require 'functions.php';
 
+$db = new mysqli("localhost", "root", "", "stellar");
+
 // Pull all words from the words table
 $wordsSql = "SELECT * FROM words";
 $wordsRes = mysqli_query($db, $wordsSql)or die(mysqli_error($db));
